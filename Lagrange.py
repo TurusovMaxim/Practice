@@ -37,6 +37,9 @@ def lagrange(coordinate_x, coordinate_y, t):
 xnew=np.linspace(np.min(coordinate_x), np.max(coordinate_x), 100)
 ynew=[lagrange(coordinate_x, coordinate_y, i) for i in xnew]
 plt.plot(coordinate_x, coordinate_y, 'o', xnew, ynew)
+plt.xlabel('X', fontsize=10)
+plt.ylabel('Y', fontsize=10)
+plt.legend(('Interpolation F(x)', 'F(x)'))
 plt.grid(True)
 plt.show()
 
